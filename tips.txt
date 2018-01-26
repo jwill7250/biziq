@@ -1,0 +1,45 @@
+Mobile Menu plugin that is compatible with Gamma can be dropped in by either Jake or myself. Spark/swat either of us.
+Scroll to top button is in the resources folder "scroll to top button.txt".
+
+Codepen location for super sexy food menu (this is only to become familiar with it, standby for further notice if this will be an upsell item) https://codepen.io/Nathanmc4pg/pen/XVERWN?editors=0110
+
+Overflow fix for using breakout in Gamma 
+.prime {
+	overflow-x: hidden;
+}
+
+Be sure to add bold (700) font-weight to style.css for Open Sans or import over from Google Fonts
+
+Be sure to style your galleries, contact us forms, reviews, or any other stock gamma features to help elevate the site further. 
+
+Resize image thumbnails w/ Regenerate Thumbnails plugin
+
+RESOURCES > Graphics > Social Icons and Code > Renamed for Footer -- this is where all the icons to replace the crappy generic footer icons are.
+
+To do this in wordpress go to to Widget Settings (towards the bottom of the left sidebar) and in the upload section at the bottom drop in all the images of the cred builders you plan on using (props to Billy).
+
+The jquery needed to get rid of empty p tags goes in the footer.php inside the script tags after the code: "jQuery(document).ready( function($) { "
+
+$('p').each(function() {
+    var $this = $(this);
+    if($this.html().replace(/\s|&nbsp;/g, '').length == 0)
+$this.remove();
+});
+// To leave the &nbsp; in the page just remove that from inside the replace parentheses. 
+
+Remove bold on thumb icons (:after) on Feedback page to get rid of different icon styling from FontAwesome (props Kass)
+It can be useful to place a video placeholder, responsive video code in Resources folder
+iOS glitches:
+Drop this code into the bottom of your style sheet until next gamma update rolls out: 
+
+@media only screen and (max-width: 767px) {
+ 		 nav.nav ul li:after {
+ display: none !important;
+  }
+}
+
+For all classes with parallax: set up a 767px media query with the style:
+
+background-attachment: scroll;
+
+https://autoprefixer.github.io/ ensure you have all of your cross compatibility code in your stylesheets after you put them together.
